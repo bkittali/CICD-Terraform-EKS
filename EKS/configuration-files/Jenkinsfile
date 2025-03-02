@@ -59,7 +59,7 @@ pipeline{
                 }
             }
         }
-        stage('Deploying Nginx'){
+        stage('Deploying Nginx Application'){
             steps{
                 script{
                     dir('EKS/configuration-files'){
@@ -68,7 +68,7 @@ pipeline{
                         sh 'kubectl apply -f service.yml'
                     }
                 }
-            }
+            } 
         }
         
     }
