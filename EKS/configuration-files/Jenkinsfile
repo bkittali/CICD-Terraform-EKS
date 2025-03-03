@@ -9,7 +9,7 @@ pipeline{
         stage('checkout SCM'){
             steps{
                 script{
-                    checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[credentialsId: 'cicd-terraform-eks-github-sshkey', url: 'git@github.com:bkittali/CICD-Terraform-EKS.git']])
+                    checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[credentialsId: 'cicd-terraform-eks', url: 'git@github.com:bkittali/CICD-Terraform-EKS.git']])
                 }
             }
         }
