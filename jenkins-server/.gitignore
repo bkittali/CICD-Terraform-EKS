@@ -1,2 +1,5 @@
 .terraform
 .terraform.lock.hcl
+Action-Parametrize.png
+screenshot_manage_jenkins.png
+ssh-jenkins-keys-github.txt
