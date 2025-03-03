@@ -34,7 +34,7 @@ module "vpc" {
 module "eks" {
   source                         = "terraform-aws-modules/eks/aws"
   cluster_name                   = "my-eks-cluster"
-  cluster_version                = "1.24"
+  cluster_version                = "1.27"
 
   cluster_endpoint_public_access = true
   
@@ -47,7 +47,8 @@ module "eks" {
       max_size      = 3
       desired_size  = 2
   
-      instance_type = ["t2.small"]
+      instance_type = ["t3.medium"]
+      ami_type      = "AL2_x86_64"  # Use Amazon Linux 2 AMI
     }
   }
   tags = {
